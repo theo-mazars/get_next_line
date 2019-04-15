@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2019
-** PSU_minishell2_2018
+** get_next_line
 ** File description:
-** main
+** main - source github
 */
 
 char *add_char_to_str(char *str, char c)
