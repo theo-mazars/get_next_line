@@ -5,10 +5,22 @@
 ** main - source github
 */
 
-char *add_char_to_str(char *str, char c)
+#include <stdlib.h>
+#include <unistd.h>
+
+static size_t string_size(const char *str) {
+    size_t i = 0;
+
+    if (str == NULL)
+        return 0;
+    while (str[++i]);
+    return i;
+}
+
+static char *add_char_to_str(char *str, char c)
 {
     int i = 0;
-    char *buff = malloc(sizeof(char) * (my_strlen(str) + 2));
+    char *buff = malloc(sizeof(char) * (string_size(str) + 2));
 
     if (str == NULL) {
         if (c != '\n')
